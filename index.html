@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Akhir Pemrograman Web - XI TKJ</title>
+    <style>
+        body { background-color: #add8e6; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 500px; margin-bottom: 20px; }
+        input, textarea { width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .hasil { margin-top: 20px; padding: 15px; background: #f9f9f9; border-left: 5px solid #007bff; display: none; }
+        .section-soal { width: 100%; max-width: 800px; background: white; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        img { max-width: 100%; height: auto; border: 1px solid #ddd; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Form Biodata (JavaScript)</h2>
+        <label>Nama Lengkap:</label>
+        <input type="text" id="nama">
+        
+        <label>Kelas:</label>
+        <input type="text" id="kelas">
+        
+        <label>Alamat:</label>
+        <textarea id="alamat" rows="3"></textarea>
+        
+        <label>Tanggal Lahir:</label>
+        <input type="date" id="tgl_lahir">
+        
+        <button onclick="hitungUmur()">Simpan Data</button>
+
+        <div id="resultBox" class="hasil">
+            <p id="resNama"></p>
+            <p id="resKelas"></p>
+            <p id="resAlamat"></p>
+            <p id="resUmur" style="font-weight: bold; color: blue;"></p>
+        </div>
+    </div>
+
+    <div class="section-soal">
+        <h2>Laporan Praktik Soal 1 & 2</h2>
+        <hr>
+        <h3>Hasil Soal 1 (XAMPP)</h3>
+        <p>Deskripsi: Website PHP dijalankan di localhost XAMPP.</p>
+        <img src="screenshot-soal1.jpg" alt="Screenshot Soal 1">
+        
+        <h3>Hasil Soal 2 (Laragon)</h3>
+        <p>Deskripsi: Website PHP dijalankan di localhost Laragon.</p>
+        <img src="screenshot-soal2.jpg" alt="Screenshot Soal 2">
+    </div>
+
+    <script>
+        function hitungUmur() {
+            // Ambil data [cite: 41]
+            const nama = document.getElementById('nama').value;
+            const kelas = document.getElementById('kelas').value;
+            const alamat = document.getElementById('alamat').value;
+            const tglLahir = new document.getElementById('tgl_lahir').value;
+
+            if(!tglLahir) { alert("Isi tanggal lahir!"); return; }
+
+            // Logika hitung umur JS [cite: 41]
+            const lahir = new Date(tglLahir);
+            const hariIni = new Date();
+            let umur = hariIni.getFullYear() - lahir.getFullYear();
+            const m = hariIni.getMonth() - lahir.getMonth();
+            if (m < 0 || (m === 0 && hariIni.getDate() < lahir.getDate())) { umur--; }
+
+            // Tampilkan hasil [cite: 41]
+            document.getElementById('resNama').innerText = "Nama: " + nama;
+            document.getElementById('resKelas').innerText = "Kelas: " + kelas;
+            document.getElementById('resAlamat').innerText = "Alamat: " + alamat;
+            document.getElementById('resUmur').innerText = "Umur Anda: " + umur + " Tahun";
+            document.getElementById('resultBox').style.display = "block";
+        }
+    </script>
+</body>
+</html>
