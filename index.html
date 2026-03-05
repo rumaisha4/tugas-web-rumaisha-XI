@@ -2,18 +2,42 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Laporan Praktikum Pemrograman Web - XI TKJ</title>
+    <title>Laporan Praktikum Web - XI TKJ</title>
     <style>
         body { background-color: #add8e6; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
-        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); width: 100%; max-width: 850px; }
-        h1, h2, h3 { text-align: center; color: #0056b3; }
+        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); width: 100%; max-width: 800px; }
+        h1, h2 { text-align: center; color: #0056b3; }
+        
+        /* Form Soal 3 */
         .form-area { background: #f0faff; padding: 20px; border-radius: 10px; border: 1px solid #007bff; margin-bottom: 30px; }
         input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
         button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        .foto-box { margin-top: 20px; }
-        .item { margin-bottom: 40px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .item p { font-weight: bold; margin-bottom: 10px; color: #444; }
-        img { width: 100%; max-width: 750px; border-radius: 8px; border: 2px solid #007bff; }
+        
+        /* Gaya Accordion (Klik Baru Muncul) */
+        details {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: bold;
+            font-size: 18px;
+            color: #0056b3;
+            outline: none;
+        }
+        details[open] summary {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+
+        /* Gaya Foto */
+        .foto-item { text-align: center; margin-bottom: 25px; padding: 10px; }
+        .foto-item p { font-weight: bold; color: #555; margin-bottom: 10px; }
+        img { width: 100%; max-width: 700px; border-radius: 8px; border: 2px solid #007bff; }
     </style>
 </head>
 <body>
@@ -22,7 +46,7 @@
     <h1>LAPORAN PRAKTIKUM PEMROGRAMAN WEB</h1>
 
     <div class="form-area">
-        <h2>Soal 3: Form & Hitung Umur (JavaScript)</h2>
+        <h2>Soal 3: Form Biodata & Hitung Umur</h2>
         <input type="text" id="nama" placeholder="Nama Lengkap">
         <input type="text" id="kelas" placeholder="Kelas">
         <textarea id="alamat" placeholder="Alamat"></textarea>
@@ -34,75 +58,93 @@
     </div>
 
     <hr>
+    <h2>LAMPIRAN BUKTI (Klik untuk melihat)</h2>
 
-    <div class="foto-box">
-        <h2>LAMPIRAN SOAL 1 (XAMPP)</h2>
-        <div class="item">
-            <p>1. Tampilan Server Running (Apache Green)</p>
-            <img src="Screenshot (66).png"> </div>
-        <div class="item">
-            <p>2. Struktur Folder Project (htdocs)</p>
-            <img src="Screenshot (67).png">
+    <details>
+        <summary>LIHAT HASIL SOAL 1 (XAMPP)</summary>
+        <div class="foto-box">
+            <div class="foto-item">
+                <p>1. Server Running</p>
+                <img src="Screenshot (66).png">
+            </div>
+            <div class="foto-item">
+                <p>2. Struktur Folder</p>
+                <img src="Screenshot (67).png">
+            </div>
+            <div class="foto-item">
+                <p>3. Source Code PHP</p>
+                <img src="Screenshot (68).png">
+            </div>
+            <div class="foto-item">
+                <p>4. Tampilan Form</p>
+                <img src="Screenshot (69).png">
+            </div>
+            <div class="foto-item">
+                <p>5. Hasil Hitung Umur</p>
+                <img src="Screenshot (70).png">
+            </div>
         </div>
-        <div class="item">
-            <p>3. Source Code PHP</p>
-            <img src="Screenshot (68).png">
-        </div>
-        <div class="item">
-            <p>4. Tampilan Form Sebelum Diisi</p>
-            <img src="Screenshot (69).png">
-        </div>
-        <div class="item">
-            <p>5. Tampilan Hasil Setelah Simpan (Hitung Umur)</p>
-            <img src="Screenshot (70).png">
-        </div>
-    </div>
+    </details>
 
-    <div class="foto-box">
-        <h2>LAMPIRAN SOAL 2 (LARAGON)</h2>
-        <div class="item">
-            <p>1. Tampilan Server Running (Laragon)</p>
-            <img src="Screenshot (71).png">
+    <details>
+        <summary>LIHAT HASIL SOAL 2 (LARAGON)</summary>
+        <div class="foto-box">
+            <div class="foto-item">
+                <p>1. Server Running</p>
+                <img src="Screenshot (71).png">
+            </div>
+            <div class="foto-item">
+                <p>2. Struktur Folder</p>
+                <img src="Screenshot (72).png">
+            </div>
+            <div class="foto-item">
+                <p>3. Source Code PHP</p>
+                <img src="Screenshot (73).png">
+            </div>
+            <div class="foto-item">
+                <p>4. Tampilan Form</p>
+                <img src="Screenshot (74).png">
+            </div>
+            <div class="foto-item">
+                <p>5. Hasil Hitung Umur</p>
+                <img src="Screenshot (75).png">
+            </div>
         </div>
-        <div class="item">
-            <p>2. Struktur Folder Project (www)</p>
-            <img src="Screenshot (72).png">
-        </div>
-        <div class="item">
-            <p>3. Source Code PHP</p>
-            <img src="Screenshot (73).png">
-        </div>
-        <div class="item">
-            <p>4. Tampilan Form</p>
-            <img src="Screenshot (74).png">
-        </div>
-        <div class="item">
-            <p>5. Tampilan Hasil Perhitungan Umur</p>
-            <img src="Screenshot (75).png">
-        </div>
-    </div>
+    </details>
 
-    <div class="foto-box">
-        <h2>LAMPIRAN SOAL 3 (GITHUB SETTINGS)</h2>
-        <div class="item">
-            <p>1. Repository GitHub</p>
-            <img src="Screenshot (76).png">
+    <details>
+        <summary>LIHAT BUKTI SOAL 3 (GITHUB PAGES)</summary>
+        <div class="foto-box">
+            <div class="foto-item">
+                <p>1. Repository GitHub</p>
+                <img src="Screenshot (76).png">
+            </div>
+            <div class="foto-item">
+                <p>2. File index.html di GitHub</p>
+                <img src="Screenshot (77).png">
+            </div>
+            <div class="foto-item">
+                <p>3. Pengaturan Pages Aktif</p>
+                <img src="Screenshot (78).png">
+            </div>
+            <div class="foto-item">
+                <p>4. Website Berhasil Online</p>
+                <img src="Screenshot (79).png">
+            </div>
         </div>
-        <div class="item">
-            <p>2. Pengaturan GitHub Pages Aktif</p>
-            <img src="Screenshot (77).png">
-        </div>
-    </div>
+    </details>
+
 </div>
 
 <script>
     function hitung() {
         const tgl = document.getElementById('tgl_lahir').value;
-        if(!tgl) return alert("Isi tanggal dulu!");
+        const nama = document.getElementById('nama').value;
+        if(!tgl) return alert("Isi tanggal lahir!");
         const lahir = new Date(tgl);
         const hariIni = new Date();
         let umur = hariIni.getFullYear() - lahir.getFullYear();
-        document.getElementById('res').innerHTML = "<b>Hasil:</b> Umur Anda adalah " + umur + " Tahun.";
+        document.getElementById('res').innerHTML = "<b>Nama:</b> " + nama + "<br><b>Umur:</b> " + umur + " Tahun";
         document.getElementById('hasilJS').style.display = "block";
     }
 </script>
