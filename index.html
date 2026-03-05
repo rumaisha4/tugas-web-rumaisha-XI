@@ -2,80 +2,110 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Akhir Pemrograman Web - XI TKJ</title>
+    <title>Laporan Praktikum Pemrograman Web - XI TKJ</title>
     <style>
-        body { background-color: #add8e6; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 500px; margin-bottom: 20px; }
-        input, textarea { width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        .hasil { margin-top: 20px; padding: 15px; background: #f9f9f9; border-left: 5px solid #007bff; display: none; }
-        .section-soal { width: 100%; max-width: 800px; background: white; padding: 20px; border-radius: 10px; margin-top: 20px; }
-        img { max-width: 100%; height: auto; border: 1px solid #ddd; margin-top: 10px; }
+        body { background-color: #add8e6; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); width: 100%; max-width: 850px; }
+        h1, h2, h3 { text-align: center; color: #0056b3; }
+        .form-area { background: #f0faff; padding: 20px; border-radius: 10px; border: 1px solid #007bff; margin-bottom: 30px; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .foto-box { margin-top: 20px; }
+        .item { margin-bottom: 40px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        .item p { font-weight: bold; margin-bottom: 10px; color: #444; }
+        img { width: 100%; max-width: 750px; border-radius: 8px; border: 2px solid #007bff; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h2>Form Biodata (JavaScript)</h2>
-        <label>Nama Lengkap:</label>
-        <input type="text" id="nama">
-        
-        <label>Kelas:</label>
-        <input type="text" id="kelas">
-        
-        <label>Alamat:</label>
-        <textarea id="alamat" rows="3"></textarea>
-        
-        <label>Tanggal Lahir:</label>
-        <input type="date" id="tgl_lahir">
-        
-        <button onclick="hitungUmur()">Simpan Data</button>
+<div class="container">
+    <h1>LAPORAN PRAKTIKUM PEMROGRAMAN WEB</h1>
 
-        <div id="resultBox" class="hasil">
-            <p id="resNama"></p>
-            <p id="resKelas"></p>
-            <p id="resAlamat"></p>
-            <p id="resUmur" style="font-weight: bold; color: blue;"></p>
+    <div class="form-area">
+        <h2>Soal 3: Form & Hitung Umur (JavaScript)</h2>
+        <input type="text" id="nama" placeholder="Nama Lengkap">
+        <input type="text" id="kelas" placeholder="Kelas">
+        <textarea id="alamat" placeholder="Alamat"></textarea>
+        <input type="date" id="tgl_lahir">
+        <button onclick="hitung()">Simpan Data</button>
+        <div id="hasilJS" style="display:none; margin-top:15px; background:#e7ffea; padding:10px; border-radius:5px;">
+            <p id="res"></p>
         </div>
     </div>
 
-    <div class="section-soal">
-        <h2>Laporan Praktik Soal 1 & 2</h2>
-        <hr>
-        <h3>Hasil Soal 1 (XAMPP)</h3>
-        <p>Deskripsi: Website PHP dijalankan di localhost XAMPP.</p>
-        <img src="screenshot-soal1.jpg" alt="Screenshot Soal 1">
-        
-        <h3>Hasil Soal 2 (Laragon)</h3>
-        <p>Deskripsi: Website PHP dijalankan di localhost Laragon.</p>
-        <img src="screenshot-soal2.jpg" alt="Screenshot Soal 2">
+    <hr>
+
+    <div class="foto-box">
+        <h2>LAMPIRAN SOAL 1 (XAMPP)</h2>
+        <div class="item">
+            <p>1. Tampilan Server Running (Apache Green)</p>
+            <img src="Screenshot (66).png"> </div>
+        <div class="item">
+            <p>2. Struktur Folder Project (htdocs)</p>
+            <img src="Screenshot (67).png">
+        </div>
+        <div class="item">
+            <p>3. Source Code PHP</p>
+            <img src="Screenshot (68).png">
+        </div>
+        <div class="item">
+            <p>4. Tampilan Form Sebelum Diisi</p>
+            <img src="Screenshot (69).png">
+        </div>
+        <div class="item">
+            <p>5. Tampilan Hasil Setelah Simpan (Hitung Umur)</p>
+            <img src="Screenshot (70).png">
+        </div>
     </div>
 
-    <script>
-        function hitungUmur() {
-            // Ambil data [cite: 41]
-            const nama = document.getElementById('nama').value;
-            const kelas = document.getElementById('kelas').value;
-            const alamat = document.getElementById('alamat').value;
-            const tglLahir = new document.getElementById('tgl_lahir').value;
+    <div class="foto-box">
+        <h2>LAMPIRAN SOAL 2 (LARAGON)</h2>
+        <div class="item">
+            <p>1. Tampilan Server Running (Laragon)</p>
+            <img src="Screenshot (71).png">
+        </div>
+        <div class="item">
+            <p>2. Struktur Folder Project (www)</p>
+            <img src="Screenshot (72).png">
+        </div>
+        <div class="item">
+            <p>3. Source Code PHP</p>
+            <img src="Screenshot (73).png">
+        </div>
+        <div class="item">
+            <p>4. Tampilan Form</p>
+            <img src="Screenshot (74).png">
+        </div>
+        <div class="item">
+            <p>5. Tampilan Hasil Perhitungan Umur</p>
+            <img src="Screenshot (75).png">
+        </div>
+    </div>
 
-            if(!tglLahir) { alert("Isi tanggal lahir!"); return; }
+    <div class="foto-box">
+        <h2>LAMPIRAN SOAL 3 (GITHUB SETTINGS)</h2>
+        <div class="item">
+            <p>1. Repository GitHub</p>
+            <img src="Screenshot (76).png">
+        </div>
+        <div class="item">
+            <p>2. Pengaturan GitHub Pages Aktif</p>
+            <img src="Screenshot (77).png">
+        </div>
+    </div>
+</div>
 
-            // Logika hitung umur JS [cite: 41]
-            const lahir = new Date(tglLahir);
-            const hariIni = new Date();
-            let umur = hariIni.getFullYear() - lahir.getFullYear();
-            const m = hariIni.getMonth() - lahir.getMonth();
-            if (m < 0 || (m === 0 && hariIni.getDate() < lahir.getDate())) { umur--; }
+<script>
+    function hitung() {
+        const tgl = document.getElementById('tgl_lahir').value;
+        if(!tgl) return alert("Isi tanggal dulu!");
+        const lahir = new Date(tgl);
+        const hariIni = new Date();
+        let umur = hariIni.getFullYear() - lahir.getFullYear();
+        document.getElementById('res').innerHTML = "<b>Hasil:</b> Umur Anda adalah " + umur + " Tahun.";
+        document.getElementById('hasilJS').style.display = "block";
+    }
+</script>
 
-            // Tampilkan hasil [cite: 41]
-            document.getElementById('resNama').innerText = "Nama: " + nama;
-            document.getElementById('resKelas').innerText = "Kelas: " + kelas;
-            document.getElementById('resAlamat').innerText = "Alamat: " + alamat;
-            document.getElementById('resUmur').innerText = "Umur Anda: " + umur + " Tahun";
-            document.getElementById('resultBox').style.display = "block";
-        }
-    </script>
 </body>
 </html>
